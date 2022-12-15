@@ -10,8 +10,8 @@ export default function App() {
   const keyDownHandle = event => {
     event.preventDefault();
     let charCode = String.fromCharCode(event.which).toLowerCase();
-    if ((event.ctrlKey || event.metaKey) && event.shiftKey && charCode === 'z') if (data.length) redoHandle(event);
-    else if ((event.ctrlKey || event.metaKey) && charCode === 'z') if (points.length) undoHandle(event);
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && charCode === 'z') { if (data.length) redoHandle(event) }
+    else if ((event.ctrlKey || event.metaKey) && charCode === 'z') { if (points.length) undoHandle(event) }
   }
   const undoHandle = e => {
     e.stopPropagation();
